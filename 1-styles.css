@@ -1,19 +1,22 @@
 /* Icon fonts */
 @font-face {
-  font-family: 'holberton_school-icon';
-  src:  url('fonts/holberton_school-icon.eot?sq4eq4');
-  src:  url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
-    url('fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
-    url('fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
-    url('fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
+  font-family: "holberton_school-icon";
+  src: url("fonts/holberton_school-icon.eot?sq4eq4");
+  src: url("fonts/holberton_school-icon.eot?sq4eq4#iefix")
+      format("embedded-opentype"),
+    url("fonts/holberton_school-icon.ttf?sq4eq4") format("truetype"),
+    url("fonts/holberton_school-icon.woff?sq4eq4") format("woff"),
+    url("fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon")
+      format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+[class^="holberton_school-icon-"],
+[class*=" holberton_school-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'holberton_school-icon' !important;
+  font-family: "holberton_school-icon" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -101,6 +104,7 @@
   --main-section-height: 90vh;
   --paragraph-font-size: 20px;
   --main-heading-font-size: 40px;
+  --icon-font-size: 150px;
 }
 
 /* Body */
@@ -110,7 +114,7 @@ body {
   max-width: var(--content-max-width);
   display: flex;
   flex-direction: column;
-  /* overflow-x: hidden;*/
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -299,6 +303,15 @@ header .menu-icon .navicon::after {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .section-list {
+    flex-wrap: wrap;
+  }
+  .section-list-item span {
+    font-size: 10px;
+  }
+}
+
 /* Main */
 main {
   display: flex;
@@ -333,10 +346,9 @@ main {
 /* Reusable Components */
 .main-section-container {
   margin: 0;
-  border: red solid 1px;
 }
 .main-text-container {
-  padding: 0 26vw 5vh;
+  padding: 0 26vw;
 }
 main h1 {
   margin: 0;
@@ -347,14 +359,24 @@ main article {
   padding-top: 5vh;
 }
 .section-list {
-  padding: 0;
+  padding: 0 15vw;
   display: flex;
   flex-direction: row;
   list-style-type: none;
   align-items: center;
   justify-content: center;
-  background-color: gray;
 }
 .section-list-item {
-  background-color: red;
+  padding: 5vh;
+}
+.section-list-item span {
+  font-size: var(--icon-font-size);
+  color: var(--link-highlight-color);
+}
+.section-list-item h1 {
+  font-size: var(--paragraph-font-size);
+  font-weight: bold;
+}
+.section-list-item p {
+  font-size: var(--paragraph-font-size);
 }
