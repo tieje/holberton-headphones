@@ -1,0 +1,473 @@
+/* Icon fonts */
+@font-face {
+  font-family: "holberton_school-icon";
+  src: url("fonts/holberton_school-icon.eot?sq4eq4");
+  src: url("fonts/holberton_school-icon.eot?sq4eq4#iefix")
+      format("embedded-opentype"),
+    url("fonts/holberton_school-icon.ttf?sq4eq4") format("truetype"),
+    url("fonts/holberton_school-icon.woff?sq4eq4") format("woff"),
+    url("fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="holberton_school-icon-"],
+[class*=" holberton_school-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "holberton_school-icon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.holberton_school-icon-arrow_1:before {
+  content: "\e900";
+}
+.holberton_school-icon-arrow_2:before {
+  content: "\e901";
+}
+.holberton_school-icon-arrow_3:before {
+  content: "\e902";
+}
+.holberton_school-icon-arrow_4:before {
+  content: "\e903";
+}
+.holberton_school-icon-arrow_5:before {
+  content: "\e904";
+}
+.holberton_school-icon-check:before {
+  content: "\e905";
+}
+.holberton_school-icon-ic_bag:before {
+  content: "\e906";
+}
+.holberton_school-icon-ic_cart:before {
+  content: "\e907";
+}
+.holberton_school-icon-ic_facebook:before {
+  content: "\e908";
+}
+.holberton_school-icon-ic_hearing:before {
+  content: "\e909";
+}
+.holberton_school-icon-ic_instagram:before {
+  content: "\e90a";
+}
+.holberton_school-icon-ic_laptop:before {
+  content: "\e90b";
+}
+.holberton_school-icon-ic_money:before {
+  content: "\e90c";
+}
+.holberton_school-icon-ic_music:before {
+  content: "\e90d";
+}
+.holberton_school-icon-ic_sound:before {
+  content: "\e90e";
+}
+.holberton_school-icon-ic_twitter:before {
+  content: "\e90f";
+}
+.holberton_school-icon-ic_video:before {
+  content: "\e910";
+}
+.holberton_school-icon-menu:before {
+  content: "\e911";
+}
+.holberton_school-icon-search_1:before {
+  content: "\e912";
+}
+.holberton_school-icon-search_2:before {
+  content: "\e913";
+}
+.holberton_school-icon-star:before {
+  content: "\e914";
+}
+
+/* Variables */
+:root {
+  --main-text-color: white;
+  --main-text-contrast-color: black;
+  --link-highlight-color: #ff6565;
+  --button-hover-active-opacity: 0.9;
+  --content-max-width: 1000px;
+  --main-font-family: "Source Sans Pro", sans-serif;
+  --main-section-height: 90vh;
+  --paragraph-font-size: 20px;
+  --main-heading-font-size: 40px;
+  --icon-font-size: 150px;
+  --footer-item-horizontal-margin: 20vw;
+  --footer-item-top-margin: 10vh;
+}
+
+/* Body */
+
+body {
+  margin: 0;
+  max-width: var(--content-max-width);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  background-image: url("images/headphones_hero_1.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: var(--main-font-family);
+  text-align: center;
+  color: var(--main-text-color);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 300px;
+}
+
+/* Nav section*/
+
+.nav-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-list-item a {
+  padding: 10px;
+  color: var(--main-text-color);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.nav-list-item a:hover,
+.nav-list-item a:active {
+  color: var(--link-highlight-color);
+}
+/* mobile button menu creation */
+.mobile-nav-button {
+  visibility: hidden;
+}
+.menu-icon {
+  visibility: hidden;
+}
+.header .menu-icon {
+  cursor: pointer;
+  padding: 2.5rem;
+  position: relative;
+  user-select: none;
+  display: none;
+}
+
+header .menu-icon .navicon {
+  background: white;
+  display: block;
+  width: 2rem;
+  height: 0.2rem;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+header .menu-icon .navicon::before,
+header .menu-icon .navicon::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: white;
+  transition: all 0.2s ease-out;
+}
+.header .menu-icon .navicon::before {
+  top: 0.7rem;
+}
+header .menu-icon .navicon::after {
+  top: -0.7rem;
+}
+
+/* title page section */
+
+.title-page {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+.title-page-container {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  justify-content: center;
+  align-items: center;
+}
+.title-page-headings {
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+.title-page-headings h1 {
+  font-size: var(--main-heading-font-size);
+  padding: 0;
+  margin: 0;
+}
+.title-page-headings h2 {
+  font-size: var(--paragraph-font-size);
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+}
+.button-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6565;
+  color: var(--main-text-color);
+  border-radius: 50px;
+  font-size: 15px;
+  padding: 20px;
+  text-transform: uppercase;
+  width: 200px;
+  height: 70px;
+  font-weight: bold;
+  box-shadow: 1px 1px 10px black;
+  border: none;
+  margin-bottom: 100px;
+}
+.button-action:active,
+.button-action:hover {
+  opacity: var(--button-hover-active-opacity);
+}
+
+.title-page-desc {
+  width: 90%;
+  font-size: var(--paragraph-font-size);
+}
+
+/* Mobile changes */
+@media screen and (max-width: 480px) {
+  :root {
+    --content-max-width: 480px;
+  }
+  /* Header changes */
+  header {
+    flex-direction: column;
+    background-position: center;
+  }
+  .header-logo a img {
+    width: 37vw;
+    height: 4vh;
+  }
+  .nav-container {
+    padding: 0;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-list {
+    flex-direction: column;
+    visibility: hidden;
+  }
+  .nav-list-item a {
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  .mobile-nav-button {
+    visibility: visible;
+  }
+  .mobile-nav-button:checked .nav-list-item {
+    display: visible;
+  }
+  .menu-icon {
+    visibility: visible;
+  }
+  .header-logo {
+    flex-direction: row;
+  }
+  .logo-container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-list {
+    flex-wrap: wrap;
+  }
+  .section-list-item span {
+    font-size: 10px;
+  }
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  color: var(--main-text-color);
+  font-family: var(--main-font-family);
+  text-align: center;
+  font-size: var(--paragraph-font-size);
+}
+
+/* About Section */
+.about {
+  display: flex;
+  margin: 0;
+  height: var(--main-section-height);
+  color: var(--main-text-contrast-color);
+  align-items: center;
+}
+
+/* Results Section */
+.results {
+  display: flex;
+  margin: 0;
+  background-image: url("images/headphones_hero_2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: var(--main-section-height);
+  align-items: center;
+}
+.results .section-list {
+  margin-top: 10vh;
+}
+.results .section-list-item {
+  background-image: url("images/pentagone.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  height: 22vh;
+  width: 12vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0 2vw;
+}
+.results .section-list-item h1 {
+  margin-top: 5vh;
+  font-size: var(--main-heading-font-size);
+}
+/* Contact section */
+.contact-us {
+  color: black;
+  height: 80vh;
+}
+.contact-us .main-section-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-us .main-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
+.contact-us .heading-container {
+  margin: 3vh;
+}
+.contact-us input {
+  border: none;
+  border-bottom: #c7c7c7 solid 2px;
+  width: 20vw;
+  font-size: var(--paragraph-font-size);
+  font-weight: bold;
+  margin: 3vh;
+}
+.contact-us input::placeholder {
+  color: black;
+}
+/* Reusable Components */
+.main-section-container {
+  margin: 0;
+}
+.main-text-container {
+  padding: 0 26vw;
+}
+main h1 {
+  margin: 0;
+  font-size: var(--main-heading-font-size);
+}
+main article {
+  margin: 0;
+  padding-top: 5vh;
+}
+.section-list {
+  padding: 0 15vw;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+.section-list-item {
+  padding: 5vh;
+}
+.section-list-item span {
+  font-size: var(--icon-font-size);
+  color: var(--link-highlight-color);
+}
+.section-list-item h1 {
+  font-size: var(--paragraph-font-size);
+  font-weight: bold;
+}
+.section-list-item p {
+  font-size: var(--paragraph-font-size);
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  background-color: #03113d;
+  width: 100vw;
+  text-align: center;
+  color: white;
+}
+footer .footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-container .header-logo {
+  margin-left: var(--footer-item-horizontal-margin);
+  margin-top: var(--footer-item-top-margin);
+}
+.footer-container .social-media {
+  margin-right: var(--footer-item-horizontal-margin);
+  margin-top: var(--footer-item-top-margin);
+}
+.social-media a {
+    color: white;
+    font-size: var(--main-heading-font-size);
+    text-decoration: none;
+}
+footer .copyright {
+    text-align: center;
+    margin-top: 5vh;
+    font-family: var(--main-font-family);
+    font-weight: lighter;
+    opacity: 50%;
+}
